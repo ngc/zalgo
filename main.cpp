@@ -1,17 +1,41 @@
 #include <bits/stdc++.h>
 #include <stdlib.h>
 #include <string>
+#include <time.h>
 using namespace std;
 
-string unicode_chars[55] = {
+/*string above_unicode_chars[55] = {
 "\u036d","\u0343","\u0313","\u0307","\u0357","\u030e","\u0321","\u0340","\u032b","\u0324","\u0324","\u0323","\u0349","\u0324",
 "\u0300", "\u0305", "\u0306", "\u0307", "\u0308", "\u0309", "\u030a", "\u030b", "\u030c", "\u030e", "\u030f", "\u0310", "\u0311", 
 "\u0313", "\u0314", "\u0315", "\u031a", "\u031b", "\u033d", "\u033e", "\u033f", "\u0340", "\u0341", "\u0342", "\u0343", "\u0344", 
 "\u0346", "\u034a", "\u034b", "\u034c", "\u0350", "\u0351", "\u0352", "\u0357", "\u0358", "\u035b", "\u035d", "\u035e", "\u0360", 
 "\u0361", "\u0312"
+};*/
+
+string above_unicode_chars[103] = {
+    "\u030d", "\u030e", "\u0304", "\u0305", "\u033f", "\u0311", "\u0306", "\u0310",
+    "\u0352", "\u0357", "\u0351", "\u0307", "\u0308", "\u030a", "\u0342", "\u0343",
+    "\u0344", "\u034a", "\u034b", "\u034c", "\u0303", "\u0302", "\u030c", "\u0350",
+    "\u0300", "\u0301", "\u030b", "\u030f", "\u0312", "\u0313", "\u0314", "\u033d",
+    "\u0309", "\u0363", "\u0364", "\u0365", "\u0366", "\u0367", "\u0368", "\u0369",
+    "\u036a", "\u036b", "\u036c", "\u036d", "\u036e", "\u035b", "\u0346", "\u031a",
+    "\u036d","\u0343","\u0313","\u0307","\u0357","\u030e","\u0321","\u0340","\u032b","\u0324","\u0324","\u0323","\u0349","\u0324",
+    "\u0300", "\u0305", "\u0306", "\u0307", "\u0308", "\u0309", "\u030a", "\u030b", "\u030c", "\u030e", "\u030f", "\u0310", "\u0311", 
+    "\u0313", "\u0314", "\u0315", "\u031a", "\u031b", "\u033d", "\u033e", "\u033f", "\u0340", "\u0341", "\u0342", "\u0343", "\u0344", 
+    "\u0346", "\u034a", "\u034b", "\u034c", "\u0350", "\u0351", "\u0352", "\u0357", "\u0358", "\u035b", "\u035d", "\u035e", "\u0360", 
+    "\u0361", "\u0312"
+};
+
+string below_unicode_chars[46] = {
+"\u0316", "\u0317", "\u0318", "\u0319", "\u031c", "\u031d", "\u031e", "\u031f", "\u0320", "\u0321", 
+"\u0322", "\u0323", "\u0324", "\u0325", "\u0326", "\u0327", "\u0328", "\u0329", "\u032a", "\u032b", 
+"\u032c", "\u032d", "\u032e", "\u032f", "\u0330", "\u0331", "\u0332", "\u0333", "\u0339", "\u033a", 
+"\u033b", "\u033c", "\u0345", "\u0347", "\u0348", "\u0349", "\u034d", "\u034e", "\u0353", "\u0354", 
+"\u0355", "\u0356", "\u0359", "\u035c", "\u035f", "\u0362"
 };
 
 /*
+ABOVE
 0305
 0306
 0307
@@ -52,34 +76,92 @@ string unicode_chars[55] = {
 035e
 0360
 0361
-Ṭ̔̋̇̀̎̅̇̀̓E̡̔̇̎̆̅̅͗͗͞Ẹ̤̓̓̋͆͊̒̉͝Ẹ͆̇̊͐̿͛̉͂̔E 
 
-
-Ṭ̔̋̇̀̎̅̇̀̓Ẹ̀̎̀̈̑̊̋̓͠E̫̤̋̓͐͂̌͌͗͝E̒̀̽̇͋̈͊͒̽̕E   Ṭ̔̋̇̀̎̅̇̀̓Ẹ̀̎̀̈̑̊̋̓͠E̫̤̋̓͐͂̌͌͗͝E̒̀̽̇͋̈͊͒̽̕E
+BELOW
+0316
+0317
+0318
+0319
+031c
+031d
+031e
+031f
+0320
+0321
+0322
+0323
+0324
+0325
+0326
+0327
+0328
+0329
+032a
+032b
+032c
+032d
+032e
+032f
+0330
+0331
+0332
+0333
+0339
+033a
+0333b
+033c
+0345
+0347
+0348
+0349
+034d
+034e
+0353
+0354
+0355
+0356
+0359
+035c
+035f
+0362
 */
 
-void push_zalgo(){
-    for(int i = 0; i < 5; i++){
-        cout << unicode_chars[rand() % 55];
+string push_zalgo(int position, int magnitude = 100){
+    string ret = "";
+    if(position == 0){
+        for(int i = 0; i < 103; i++){
+            ret += above_unicode_chars[i];//rand() % 55];
+        }
+    }else if(position == 1){
+        for(int i = 0; i < 46; i++){
+            ret += below_unicode_chars[i];
+        }
+    }else if(position == 2){
+        ret += push_zalgo(0, magnitude);
+        ret += push_zalgo(1, magnitude);
     }
+    return ret;
 }
 
-void printLine(string input){
+string printLine(string input){
+    string ret = "";
     for(int i = 0; i < input.length(); i++){
-        cout << input[i];
-        if(i == input.length() - 1) continue;
-        push_zalgo();
+        ret += input[i];
+        ret += push_zalgo(rand() % 3);
     }
+    return ret;
 }
 
 int main(){
 	ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+    srand (time(NULL));
 
     string input;
+    string output = "";
     while(cin >> input){
-        printLine(input);
+        output += printLine(input);
     }
-    cout << "\n";
+    cout << output << "\n";
     
 	return 0;
 }
