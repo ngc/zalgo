@@ -1,3 +1,28 @@
+/*
+    This file is part of Zalgo.
+
+    Zalgo is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Zalgo is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Zalgo.  If not, see <https://www.gnu.org/licenses/>.
+    Copyright (C) 2020 Nathan Coulas
+
+    USAGE:
+    #include "zalgo.h"
+    cout << generateLine("Hello, World!", 0, 0, 0); //Converts "Hello, World" to Zalgo text with a magnitude of 0 for upward, downward and overlaid writing which results in the string being unaffected
+        Expected Output: Hello, World!
+    cout << generateLine("HE COMES", 5, 5, 5); // Converts "HE COMES" to Zalgo text with a magnitude of 5 overall. 'Zalgofication' is randomized so you will not get the exact same output as shown.
+        Expected Similar Output: H̤̊̈̊E̡͈̘̮͓̘̥̠̘͢ C̤̓͊̑͐ͭ̌̅̔O̢̤̥̠̖̮͓̭̠͉M̩̦͔͈̮͖͇̟͖͜E̡̡̝̟͙͖̲̰̞͟S̡̡̘̤̙̗͔̗͍̣
+*/
+
 #ifndef ZALGO_H
 #define ZALGO_H
 
