@@ -130,3 +130,7 @@ echo HE COMES | cowsay | ./zalgo
 ## License
 
 Distributed under the GNU GPL. See `LICENSE` for more information.
+
+## Notable Issues
+Since this program is entirely dependent on unicode the visual representation of the Zalgo text can vary heavily outside of the control of this program. For example, Zalgo text in markdown code blocks appears significantly vertically smaller than it usually does. 
+In the GNOME terminal above combining characters aren't shown at all. This can vary across terminal emulators. To my knowledge Discord actively filters out the effect of Zalgo text as of recently. 
