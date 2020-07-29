@@ -28,7 +28,7 @@ From [KnowYourMeme](https://knowyourmeme.com/memes/zalgo):
 
 >On forums and image boards, scrambled text began being associated with Zalgo with phrases like "he comes" and "he waits behind the wall."
 
-This strange text format is created by abusing a feature in unicode which implements characters that can be stacked on or under each other called [combinging characters](https://en.wikipedia.org/wiki/Combining_character). These characters are usually used for digitally representing different languages and writing components of languages such as Hiragana, but they can be used on latin characters to create this interesting effect.  
+This strange text format is created by abusing a feature in unicode which implements characters that can be stacked on or under each other called [combining characters](https://en.wikipedia.org/wiki/Combining_character). These characters are usually used for digitally representing different languages and writing components of languages such as Hiragana, but they can be used on latin characters to create this interesting effect.  
 
 This implementation of Zalgo is made for easy interfacing with other programs and the command line as it completely lacks a UI and takes directly from stdin and writes directly to stdout. You can read more about the usage of this project in the [usage section](#usage).
 
