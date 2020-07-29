@@ -51,9 +51,9 @@ string printLine(string input){
     string ret = "";
     for(int i = 0; i < input.length(); i++){
         ret += input[i];
-        ret += push_zalgo(2, 1000000);
-        ret += push_zalgo(1, 1000000);
-        ret += push_zalgo(0, 1000000);
+        ret += push_zalgo(2, 2);
+        ret += push_zalgo(1, 1000);
+        ret += push_zalgo(0, 1000);
         
     }
     return ret;
