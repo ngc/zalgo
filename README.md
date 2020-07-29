@@ -133,4 +133,4 @@ Distributed under the GNU GPL. See `LICENSE` for more information.
 
 ## Notable Issues
 Since this program is entirely dependent on unicode, the visual representation of the Zalgo text can vary heavily (outside of the scope of this program). For example, Zalgo text in GitHub's markdown code blocks above appear significantly vertically smaller than they usually are. 
-In the GNOME terminal combining characters aren't shown at all. This can vary across terminal emulators. To my knowledge Discord actively filters out the effect of Zalgo text as of recently. 
+In the GNOME terminal, upper combining characters aren't shown at all. This can vary across terminal emulators. To my knowledge Discord actively filters out the effect of Zalgo text as of recently. 
