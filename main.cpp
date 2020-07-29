@@ -26,6 +26,7 @@
 using namespace std;
 
 vector<int> tokenize(string input){
+    //Tokenizes argument string into 3 integers to be used as the magnitude parameters
     //Format MxDxU Example:
     //  1000x1000x5
     //  Middle = 1000
@@ -52,10 +53,13 @@ int main(int argc, char** argv){
     int m, d, u, exec_point;
 
     for(int i = 0; i < argc; i++){
-        if(argv[i] == "./main" || argv[i] == "zalgo") exec_point = i;
+        if(argv[i] == "./main" || argv[i] == "./zalgo") {
+		exec_point = i;
+		break;
+	}
     }
     
-    if(exec_point != (argc - 1) && regex_match(argv[exec_point + 1], regex("^\\d{1,}x\\d{1,}x\\d{1,}"))){
+    if(exec_point != (argc - 1) && regex_match(argv[exec_point + 1], regex("^\\d{1,}x\\d{1,}x\\d{1,}"))){ //Regular Expression to see if the argument provided fits the format
         vector<int> tokens = tokenize(argv[exec_point + 1]);
         m = tokens[0];
         d = tokens[1];
