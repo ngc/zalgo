@@ -30,7 +30,7 @@ From [KnowYourMeme](https://knowyourmeme.com/memes/zalgo):
 
 This strange text format is created by abusing a feature in unicode which implements characters that can be stacked on or under each other called [combinging characters](https://en.wikipedia.org/wiki/Combining_character). These characters are usually used for digitally representing different languages and writing components of languages such as Hiragana, but they can be used on latin characters to create this interesting effect.  
 
-This implementation of Zalgo is made for easy interfacing with other programs and the command line as it completely lacks a UI and takes directly from stdin and writes directly to stdout. You can read more about the usage of this project in the [usage  section](#usage).
+This implementation of Zalgo is made for easy interfacing with other programs and the command line as it completely lacks a UI and takes directly from stdin and writes directly to stdout. You can read more about the usage of this project in the [usage section](#usage).
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -132,5 +132,5 @@ echo HE COMES | cowsay | ./zalgo
 Distributed under the GNU GPL. See `LICENSE` for more information.
 
 ## Notable Issues
-Since this program is entirely dependent on unicode the visual representation of the Zalgo text can vary heavily outside of the control of this program. For example, Zalgo text in markdown code blocks appears significantly vertically smaller than it usually does. 
-In the GNOME terminal above combining characters aren't shown at all. This can vary across terminal emulators. To my knowledge Discord actively filters out the effect of Zalgo text as of recently. 
+Since this program is entirely dependent on unicode, the visual representation of the Zalgo text can vary heavily (outside of the scope of this program). For example, Zalgo text in GitHub's markdown code blocks above appear significantly vertically smaller than they usually are. 
+In the GNOME terminal combining characters aren't shown at all. This can vary across terminal emulators. To my knowledge Discord actively filters out the effect of Zalgo text as of recently. 
