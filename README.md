@@ -52,7 +52,7 @@ sudo apt install g++
  
 1. Clone the repo
 ```sh
-git clone https://github.com/thaniel-c/zalgo.git
+git clone https://github.com/ngc/zalgo.git
 ```
 2. Compile
 ```sh
