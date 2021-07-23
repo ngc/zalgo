@@ -16,7 +16,6 @@
     Copyright (C) 2020 Nathan Coulas
 */
 
-#include <bits/stdc++.h>
 #include <stdlib.h>
 #include <string>
 #include <time.h>

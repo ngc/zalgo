@@ -26,10 +26,10 @@
 #ifndef ZALGO_H
 #define ZALGO_H
 
-#include <bits/stdc++.h>
 #include <stdlib.h>
 #include <string>
 #include <time.h>
+#include <iostream>
 using namespace std;
 
 const string above_unicode_chars[55] = {
